@@ -10,9 +10,9 @@ export class CarComponent {
 
   carName = 'Ford';
   carYear = 2015;
-  getName() {
-    return this.carName;
-  }
+  // getName() {
+  //   return this.carName;
+  // }
   }
 
 

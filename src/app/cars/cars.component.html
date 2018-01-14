@@ -3,14 +3,16 @@
 <button class="btn btn-primary" (click)="addCar ()">Добавити авто</button>
 <p *ngIf="!addCarStatus; else success">Авто <span style="color:red">не</span> добавлено!</p>
 <ng-template #success>
-    <p>Авто добавлено!</p>    
+    <p>Авто добавлено!</p>
 </ng-template>
 <!-- <p #success>Авто добавлено!</p>     -->
 
 <hr>
-<app-car></app-car><br>
-<app-car></app-car>
+<app-car *ngFor="let car of cars"></app-car>
 
 <hr>
-
-
+<ul>
+    <li *ngFor="let item of items; let idx = index">
+<b>{{idx+1}}</b>.<i>{{item.id}}</i> - <i>{{item.name}}</i>
+    </li>
+</ul>

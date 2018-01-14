@@ -5,16 +5,21 @@ import { Component } from '@angular/core';
   templateUrl: './cars.component.html',
   styleUrls: ['./cars.component.css']
 })
-export class CarsComponent  {
+export class CarsComponent {
 
-carName = '';
-addCarStatus = false;
-constructor() {
+  carName = '';
+  addCarStatus = false;
+  cars = ['Ford', 'Audi', 'BMW', 'Volvo'];
+  items = [{ id: 3, name: 'item1' }, { id: 6, name: 'item2' }, { id: 9, name: 'item3' }];
+  constructor() {
 
-}
-addCar() {
-this.addCarStatus = true;
-}
+  }
+  addCar() {
+    this.addCarStatus = true;
+    this.cars.push(this.carName);
+    this.carName = '';
+
+  }
 
 
 }
