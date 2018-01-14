@@ -7,22 +7,14 @@ import { Component } from '@angular/core';
 })
 export class CarsComponent  {
 
-addCarStatus = '';
-inputText = 'Defolt text';
-
+carName = '';
+addCarStatus = false;
 constructor() {
 
 }
 addCar() {
-  this.addCarStatus = 'Авто добавлено!';
+this.addCarStatus = true;
 }
-// onKeyUp(event:Event) {
-// onKeyUp(value) {
-onKeyUp(event) {
-    console.log(event);
-// this.inputText = (<HTMLInputElement>event.target).value;
-// this.inputText = value;
-this.inputText = event.target.value;
-}
+
 
 }
