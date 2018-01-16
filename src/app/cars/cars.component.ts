@@ -6,9 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./cars.component.css']
 })
 export class CarsComponent {
+  // carName = '';
+  // carYear = 2018;
 
-  carName = '';
-  carYear = 2018;
 
   cars: [{name: string, year: number}] = [{
     name: 'Ford',
@@ -21,17 +21,20 @@ export class CarsComponent {
     year: 2017
   }];
 
-  constructor() {
-  }
+  constructor() {}
 
-  addCar() {
-    this.cars.push({
-      name: this.carName,
-      year: this.carYear
-    });
-    this.carName = '';
-    this.carYear = 2018;
-  }
+  updateListCar( car: { name: string, year: number}) {
+    this.cars.push(car);
+      }
+
+  // addCar() {
+  //   this.cars.push({
+  //     name: this.carName,
+  //     year: this.carYear
+  //   });
+  //   this.carName = '';
+  //   this.carYear = 2018;
+  // }
 
 }
 
