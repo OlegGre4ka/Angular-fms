@@ -1,12 +1,15 @@
-import { Directive, ElementRef, OnInit } from '@angular/core';
+import { Directive, ElementRef, OnInit, Renderer2 } from '@angular/core';
 
 @Directive({
-selector:'[appBackground]',
+    selector: '[appBackground]',
 })
-export class BackgroundDirective  implements OnInit{
-constructor(private element:ElementRef){};
-ngOnInit(){
-    console.log(this.element);
-    this.element.nativeElement.style.backgroundColor = 'red';
-};
+export class BackgroundDirective implements OnInit {
+    constructor(private element: ElementRef, private renderer: Renderer2) { }
+
+    ngOnInit() {
+        console.log(this.element);
+        this.renderer.setStyle(this.element.nativeElement, 'background-color', 'blue' );
+        this.renderer.addClass(this.element.nativeElement, 'white-text');
+        // this.element.nativeElement.style.backgroundColor = 'red';
+    }
 }

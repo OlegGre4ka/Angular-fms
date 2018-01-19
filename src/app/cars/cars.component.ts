@@ -1,5 +1,5 @@
 import { Component,
-  //  ViewEncapsulation 
+  //  ViewEncapsulation
   } from '@angular/core';
 
 @Component({
