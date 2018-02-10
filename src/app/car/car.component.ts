@@ -10,7 +10,8 @@ export class CarComponent {
   // carYear = 2018;
   // @Input() carItem: {name: string, year: number} ;
 
-  @Input('carItem') car: {name: string, year: number};//аліас
+  // tslint:disable-next-line:no-input-rename
+  @Input('carItem') car: {name: string, year: number}; // аліас
 
   // private carItem = false;
 }
